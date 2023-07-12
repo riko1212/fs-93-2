@@ -24,7 +24,7 @@
       <div class="container header-container">
         <nav class="header-navigation">
           <a href="" class="header-logo link">
-            <span class="header-logo-accent">SIMPLY</span> CHOCOLATE
+            <span class="header-logo-accent">SIMPLY </span> CHOCOLATE
             <img src="./images/logo-icon.svg" alt="logo icon"
           /></a>
           <ul class="header-menu list">
@@ -404,7 +404,9 @@
               </p>
             </li>
           </ul>
-          <button type="button" class="loved-btn">Leave a review</button>
+          <button type="button" class="loved-btn" data-modal-open>
+            Leave a review
+          </button>
         </div>
       </section>
     </main>
@@ -451,5 +453,15 @@
         </nav>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="modal-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-instagram"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
