@@ -85,7 +85,12 @@
         </ul>
       </div>
     </header>
+
+    <!-- Main -->
+
     <main>
+      <!-- Hero -->
+
       <section class="hero">
         <div class="container">
           <div class="hero-container">
@@ -101,6 +106,9 @@
           </div>
         </div>
       </section>
+
+      <!-- -----------------advantages------------------ -->
+
       <section class="advantages">
         <div class="container">
           <h2 class="visually-hidden">Advantages</h2>
@@ -453,13 +461,69 @@
         </nav>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-icon" width="24" height="24">
             <use href="./images/icons.svg#icon-instagram"></use>
           </svg>
         </button>
+        <p class="modal-title">
+          LEAVE A REVIEW ABOUT <span>OUR CHOCOLATE</span>
+        </p>
+        <form class="modal-form">
+          <label>
+            <span class="input-label-text">Name</span>
+            <span class="input-wrap">
+              <input
+                type="text"
+                name="user-name"
+                class="modal-input"
+                placeholder="Enter name"
+                required
+                maxlength="10"
+                minlength="3"
+              />
+              <svg class="modal-input-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </span>
+          </label>
+          <div class="modal-field">
+            <label for="user-email" class="input-label">Email</label>
+            <div class="input-wrap">
+              <input
+                type="email"
+                name="user-email"
+                class="modal-input"
+                placeholder="Enter email"
+                id="user-email"
+              />
+              <svg class="modal-input-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+
+          <input
+            type="tel"
+            name="user-tel"
+            class="modal-input"
+            placeholder="Enter phone"
+            required
+          />
+
+          <div class="modal-field">
+            <label for="user-text" class="input-label">Comment</label>
+            <textarea
+              name="user-text"
+              id="user-text"
+              class="modal-textarea"
+              placeholder="Enter text"
+            ></textarea>
+          </div>
+          <button type="submit" class="modal-form-btn">Send</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
