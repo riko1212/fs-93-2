@@ -444,24 +444,52 @@
             </address>
           </div>
         </div>
-        <nav class="footer-navigation">
-          <ul class="footer-menu list">
-            <li class="footer-menu-item">
-              <a class="footer-menu-link link" href="">Home</a>
-            </li>
-            <li class="footer-menu-item">
-              <a class="footer-menu-link link" href="#made">How it’s made?</a>
-            </li>
-            <li class="footer-menu-item">
-              <a class="footer-menu-link link" href="#loved"
-                >Chocolate is loved</a
+        <div class="footer-bottom">
+          <nav class="footer-navigation">
+            <ul class="footer-menu list">
+              <li class="footer-menu-item">
+                <a class="footer-menu-link link" href="">Home</a>
+              </li>
+              <li class="footer-menu-item">
+                <a class="footer-menu-link link" href="#made">How it’s made?</a>
+              </li>
+              <li class="footer-menu-item">
+                <a class="footer-menu-link link" href="#loved"
+                  >Chocolate is loved</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <form class="footer-form">
+            <div class="footer-input-wrap">
+              <input
+                type="email"
+                name="footer-email"
+                class="footer-input"
+                id="footer-email"
+                placeholder=" "
+              />
+              <label for="footer-email" class="footer-label"
+                >Enter your email</label
               >
-            </li>
-          </ul>
-        </nav>
+            </div>
+            <button type="submit" class="footer-form-btn">Subscribe</button>
+          </form>
+          <!-- <form class="footer-form">
+            <label aria-label="email">
+              <input
+                type="email"
+                name="footer-email"
+                class="footer-input"
+                placeholder="Enter your email"
+              />
+            </label>
+            <button type="submit" class="footer-form-btn">Subscribe</button>
+          </form> -->
+        </div>
       </div>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-icon" width="24" height="24">
@@ -483,6 +511,7 @@
                 required
                 maxlength="10"
                 minlength="3"
+                autofocus
               />
               <svg class="modal-input-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-phone"></use>
@@ -521,6 +550,27 @@
               class="modal-textarea"
               placeholder="Enter text"
             ></textarea>
+          </div>
+          <div class="modal-field">
+            <input
+              type="checkbox"
+              name="user-terms"
+              id="user-terms"
+              value="one"
+              class="modal-check visually-hidden"
+            />
+            <label for="user-terms" class="check-text">
+              <span>
+                <svg class="check-icon" width="10" height="10">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+                <svg class="check-icon" width="10" height="10">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href="" class="privacy-link">Privacy Policy</a>
+            </label>
           </div>
           <button type="submit" class="modal-form-btn">Send</button>
         </form>
