@@ -1,0 +1,231 @@
+@media screen and (min-width: 375px) {
+  .container {
+    max-width: 365px;
+  }
+
+  .footer-form {
+    flex-wrap: nowrap;
+  }
+
+  .footer-input-wrap {
+    width: 207px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 734px;
+  }
+
+  .made > .container {
+    max-width: 644px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+
+  .advantages {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .advantages-list {
+    gap: 32px;
+  }
+
+  .advantages-item {
+    width: calc((100% - 32px) / 2);
+  }
+
+  .taste {
+    padding-top: 80px;
+  }
+
+  .taste-list {
+    gap: 32px;
+  }
+
+  .taste-item {
+    width: calc((100% - 32px) / 2);
+  }
+
+  .made {
+    padding-top: 80px;
+  }
+
+  .made-head {
+    margin-bottom: 28px;
+  }
+
+  .made-content {
+    max-width: 100%;
+    padding: 32px;
+  }
+
+  .made-list {
+    max-width: 464px;
+  }
+
+  .loved {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .loved-title {
+    margin-bottom: 91px;
+  }
+
+  .loved-list {
+    column-gap: 16px;
+    margin-bottom: 94px;
+  }
+
+  .loved-item {
+    width: calc((100% - 16px) / 2);
+  }
+
+  .footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 54px;
+    margin-bottom: 24px;
+  }
+
+  .footer-main-text {
+    font-size: 28px;
+    line-height: 1.21;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .footer-menu {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .footer-navigation {
+    margin-bottom: 0px;
+  }
+
+  .footer-input-wrap {
+    width: 233px;
+  }
+}
+
+@media screen and (min-width: 1166px) {
+  .container,
+  .made > .container {
+    max-width: 1166px;
+  }
+
+  .advantages-list {
+    padding-left: 18px;
+    padding-right: 18px;
+    gap: 88px;
+  }
+
+  .advantages-item {
+    width: calc((100% - 88px * 2) / 3);
+  }
+
+  .advantages-item:last-child::after {
+    display: none;
+  }
+
+  .advantages-item::after {
+    content: '';
+    position: absolute;
+    right: -44px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 124px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .taste {
+    padding-top: 100px;
+  }
+
+  .taste-title {
+    margin-bottom: 28px;
+  }
+
+  .taste-list {
+    gap: 19px;
+  }
+
+  .taste-item {
+    width: calc((100% - 57px) / 4);
+  }
+
+  .made {
+    padding-top: 100px;
+  }
+
+  .made-title {
+    margin-bottom: 50px;
+  }
+
+  .made-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .made-image {
+    max-width: 600px;
+  }
+
+  .made-item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  .made-content {
+    max-width: 516px;
+  }
+
+  .made-list {
+    max-width: 425px;
+  }
+
+  .made-image {
+    margin-bottom: 0;
+  }
+
+  .loved {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .loved-list {
+    column-gap: 28px;
+    margin-bottom: 49px;
+  }
+
+  .loved-item {
+    width: calc((100% - 56px) / 3);
+  }
+
+  .footer-input-wrap {
+    width: 313px;
+  }
+
+  .footer-form-btn {
+    padding: 17px 32px;
+  }
+
+  .footer-main-text {
+    margin-bottom: 0;
+  }
+}
