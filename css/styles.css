@@ -62,6 +62,10 @@ body {
   list-style-type: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .section-title {
   color: var(--main-text-color);
   text-align: center;
@@ -110,91 +114,66 @@ body {
   justify-content: space-between;
 }
 
-.header-menu {
-  display: flex;
-  gap: 24px;
-}
-
+.header-menu,
 .header-socials {
-  display: flex;
-  gap: 18px;
+  display: none;
 }
 
-.header-socials-link {
-  display: block;
-}
-
-.header-socials-item {
-  height: 24px;
-}
-
-.current {
-  position: relative;
-}
-
-.current::after {
-  content: '';
-  position: absolute;
-  bottom: -45px;
+.mob-menu {
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--accent-color);
+  background-color: #1e1823;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 88px;
+}
+.header-socials-icon {
+}
+.mob-menu-list {
+  padding-left: 28px;
+  margin-bottom: 50px;
 }
 
-.header-socials-link {
+.mob-menu-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.mob-menu-link {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14; /* 114.286% */
+  letter-spacing: -0.02em;
+}
+
+.mob-socials {
+  display: flex;
+  gap: 10px;
+}
+.mob-socials-item {
+  width: 40px;
+  height: 40px;
+}
+.mob-socials-link {
   width: 100%;
   height: 100%;
-  background-color: var(--accent-color);
+  background-color: #ffffff;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  transition: background-color 300ms ease, color 300ms ease;
-  color: #111111;
-  /* box-shadow: 0 0 0 3px red, 0 0 0 6px green, 0 0 0 9px blue; */
 }
-
-.header-socials-icon {
-  fill: currentColor;
+.mob-socials-icon {
 }
-
-.header-socials-link:is(:hover, :focus) {
-  background-color: rgb(112, 112, 221);
-  color: var(--secondary-text-color);
-}
-
-/* .header-socials-link:is(:hover, :focus) .header-socials-icon {
-  fill: var(--secondary-text-color);
-} */
-
-.header-socials-item {
-  width: 50px;
-  height: 50px;
-}
-
-.header-menu-link {
-  color: var(--main-text-color);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: -0.02em;
-  transition: color 300ms ease;
-}
-
-.header-menu-link:hover,
-.header-menu-link:focus {
-  color: var(--accent-color);
-}
-
-/* .header-menu-link:is(:hover, :focus) {
-  color: var(--accent-color)
-} */
-
-/* .header-menu-link:focus {
-  color: var(--accent-color)
-} */
 
 /**------------ HERO-------------- */
 
@@ -209,13 +188,31 @@ body {
       rgba(17, 17, 17, 0),
       rgba(17, 17, 17, 0.4)
     ),
-    url(../images/hero-bg.jpeg);
+    url(../images/hero-bg-mob.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 30px;
-  padding: 380px 40px 40px 40px;
+  /* padding: 380px 40px 40px 40px; */
+  padding: 395px 20px 20px 20px;
 }
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero-container {
+    background-image: linear-gradient(
+        180deg,
+        rgba(17, 17, 17, 0),
+        rgba(17, 17, 17, 0.4)
+      ),
+      url(../images/hero-bg-mob-2x.jpeg);
+  }
+}
+
 .hero-title {
   color: var(--secondary-text-color);
-  font-size: 28px;
+  /* font-size: 28px; */
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.21;
   letter-spacing: -0.03em;
@@ -229,7 +226,8 @@ body {
   font-weight: 600;
   background-color: var(--accent-color);
   cursor: pointer;
-  padding: 14px 40px;
+  /* padding: 14px 40px; */
+  padding: 12px 28px;
   border-radius: 100px;
   border: none;
   margin-right: 14px;
@@ -238,12 +236,15 @@ body {
 .hero-buttons {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .hero-link {
   color: var(--secondary-text-color);
   font-size: 14px;
   font-weight: 600;
-  padding: 14px 40px;
+  /* padding: 14px 40px; */
+  padding: 12px 28px;
   border-radius: 100px;
   border: 1px solid #fff;
 }
@@ -254,7 +255,8 @@ body {
   line-height: 1.29;
   letter-spacing: -0.03em;
   display: block;
-  margin-left: auto;
+  /* margin-left: auto; */
+  margin-top: 38px;
 }
 
 /**------------ ADVANTAGES-------------- */
